@@ -60,18 +60,18 @@
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading">김</h4>
-									Cras sit amet nibh libero,
-									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> 더보기 </a>
+									라면을 할 수 있을까 못할까 수옹이다.
+									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span id="more">더보기</span></a>
 								</div>
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
+							<div id="collapseThree" class="panel-collapse collapse">
 								<div class="media panel-body">
 									<a class="pull-left" href="#">
 										<img alt="Generic placeholder image" src="../images/pic.jpg">
 									</a>
 									<div class="media-body">
-										<h4 class="media-heading">박</h4>
-										Cras sit amet nibh libero, 
+										<h4 class="media-heading">이</h4>
+										해야지
 									</div>
 								</div>
 								<div class="media panel-body">
@@ -80,56 +80,67 @@
 									</a>
 									<div class="media-body">
 										<h4 class="media-heading">박</h4>
-										Cras sit amet nibh libero, 
+										ㄴㄴ 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading media">
+								<a class="pull-left" href="#"> 
+									<img alt="Generic placeholder image" src="../images/pic.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">최</h4>
+									내가 그린 기린그림은 목이 긴 기린그림인가 목이 안긴 기린그림인가?
+									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span id="more">더보기</span></a>
+								</div>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="media panel-body">
+									<a class="pull-left" href="#">
+										<img alt="Generic placeholder image" src="../images/pic.jpg">
+									</a>
+									<div class="media-body">
+										<h4 class="media-heading">정</h4>
+										네가 그린 기린그림은 못 그린 기린그림이고 내가 그린 기린그림은 잘 그린 기린그림이다.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading media">
+								<a class="pull-left" href="#"> 
+									<img alt="Generic placeholder image" src="../images/pic.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">오</h4>
+									고려고교 교복은 고급교복이고 고려고교 교복은 고급원단을 사용했다.
+									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> 더보기 </a>
+								</div>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse">
+								<div class="media panel-body">
+									<a class="pull-left" href="#">
+										<img alt="Generic placeholder image" src="../images/pic.jpg">
+									</a>
+									<div class="media-body">
+										<h4 class="media-heading">조</h4>
+										고려고교 
+									</div>
+								</div>
+								<div class="media panel-body">
+									<a class="pull-left" href="#">
+										<img alt="Generic placeholder image" src="../images/pic.jpg">
+									</a>
+									<div class="media-body">
+										<h4 class="media-heading">송</h4>
+										ㄷㄷㄷ
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<ul class="media-list">
-						<li class="media">
-							<a class="pull-left" href="#"> 
-								<img alt="Generic placeholder image" src="../images/pic.jpg">
-							</a>
-							<div class="media-body">
-								<h4 class="media-heading">김</h4>
-								<p>Cras sit amet nibh libero, </p>
-								<div class="media">
-									<a class="pull-left" href="#"> 
-										<img alt="Generic placeholder image" src="../images/pic.jpg">
-									</a>
-									<div class="media-body">
-										<h4 class="media-heading">이</h4>
-										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-										scelerisque ante sollicitudin commodo. Cras purus odio,
-										vestibulum in vulputate at, tempus viverra turpis.
-										<!-- Nested media object -->
-										<div class="media">
-											<a class="pull-left" href="#">
-												<img alt="Generic placeholder image" src="../images/pic.jpg">
-											</a>
-											<div class="media-body">
-												<h4 class="media-heading">박</h4>
-												Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-												scelerisque ante sollicitudin commodo. Cras purus odio,
-												vestibulum in vulputate at, tempus viverra turpis.
-											</div>
-										</div>
-									</div>
-								</div>
-							</div></li>
-						<li class="media">
-							<a class="pull-left" href="#"> 
-								<img alt="Generic placeholder image" src="../images/pic.jpg">
-							</a>
-							<div class="media-body">
-								<h4 class="media-heading">최</h4>
-								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-									scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-									in vulputate at, tempus viverra turpis.</p>
-							</div>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -146,9 +157,18 @@
 	<script src="../js/jquery-3.5.1.js"></script>
 	<script src="../js/bootstrap.js"></script>
     <script type="text/javascript">
-		$(function () { $('#collapseOne').collapse({
-			toggle: true
-		})});
+    	$(function () { $('#collapseThree').collapse({ 
+    		toggle: false
+    	})});
+    	
+    	$('#more').click(function (event) {
+    		var more = $('#more').html();
+    		if ( more == "더보기" ) {
+    			$(this).html('숨기기');
+    		} else if ( more == "숨기기" ) {
+    			$(this).html('더보기');
+    		}
+    	})
     </script>
 </body>
 </html>

@@ -8,6 +8,8 @@
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link href="../css/custom.css" rel="stylesheet">
 	<link rel="shortcut icon" href="" type="image/x-icon">
+	<style>
+	</style>
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="50">
 	<div class="container">
@@ -127,7 +129,19 @@
 						</div>
 					</div>
 				</div>
-				<div align="center">
+				<div class="col-sm-9">
+					<select class="btn-sm btn-default">
+						<option value="content">글내용</option>
+						<option value="subject">글제목</option>
+						<option value="name">작성자</option>
+					</select>
+					<input type="text" name="search"> 
+					<input type="submit" value="검색" class="btn-sm btn-default">
+				</div>
+				<div align="right" class="col-sm-3">
+					<button type="button" class="btn-sm btn-default">글쓰기</button>
+				</div>
+				<div align="center" class="col-xs-12">
 					<ul class="pagination">
 						<li class="disabled"><a href="#">«</a></li>
 						<li class="active"><a href="#">1</a></li>
