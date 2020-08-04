@@ -8,6 +8,8 @@
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link href="../css/custom.css" rel="stylesheet">
 	<link rel="shortcut icon" href="" type="image/x-icon">
+	<style>
+	</style>
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="50">
 	<div class="container">
@@ -45,33 +47,44 @@
 					<p>좋아요 15</p><br>
 				</div>
 				<div class="col-md-5 reply">
-					<h4>댓글</h4>
+					<h4><span class="glyphicon glyphicon-comment"></span> 댓글 <small>[<span class="reply-totalcount">6</span>]</small></h4>
 					<form action="#" class="form-group">
 						<div class="form-group">
-							<textarea rows="3" class="form-control"></textarea>
+							<input type="text" class="form-control" name="replyer" placeholder="작성자">
 						</div>
-						<button type="submit" class="btn btn-default">댓글 쓰기</button>
+						<div class="form-group">
+							<textarea rows="3" class="form-control" name="reply" placeholder="내용"></textarea>
+						</div>
+						<div align="right">
+							<button type="button" class="btn btn-default" id="btnAddReply">댓글 쓰기</button>
+						</div>
 					</form>
-					<div class="panel-group" id="accordion">
+					<div class="panel-group" id="comment">
 						<div class="panel panel-default">
 							<div class="panel-heading media">
 								<a class="pull-left" href="#"> 
 									<img alt="Generic placeholder image" src="../images/pic.jpg">
 								</a>
 								<div class="media-body">
-									<h4 class="media-heading">김</h4>
-									라면을 할 수 있을까 못할까 수옹이다.
-									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span id="more">더보기</span></a>
+									<div class="media-heading">
+										<strong class="text-primary">김</strong>
+										<small class="pull-right text-muted">2020-08-02</small>
+									</div>
+									<p>들의 콩깍지는 깐 콩깍지인가 안 깐 콩깍지인가. 깐 콩깍지면 어떻고 안 깐 콩깍지면 어떠냐. 깐 콩깍지나 안 깐 콩깍지나 콩깍지는 다 콩깍지인데.</p>
+									<a data-toggle="collapse" href="#col3"><span class="more">더보기</span></a>
 								</div>
 							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
+							<div id="col3" class="panel-collapse collapse">
 								<div class="media panel-body">
 									<a class="pull-left" href="#">
 										<img alt="Generic placeholder image" src="../images/pic.jpg">
 									</a>
 									<div class="media-body">
-										<h4 class="media-heading">이</h4>
-										해야지
+										<div class="media-heading">
+											<strong class="text-primary">이</strong>
+											<small class="pull-right text-muted">2020-08-02</small>
+										</div>
+										<p>ㅋㄲㅈㅁ</p>
 									</div>
 								</div>
 								<div class="media panel-body">
@@ -79,8 +92,11 @@
 										<img alt="Generic placeholder image" src="../images/pic.jpg">
 									</a>
 									<div class="media-body">
-										<h4 class="media-heading">박</h4>
-										ㄴㄴ 
+										<div class="media-heading">
+											<strong class="text-primary">박</strong>
+											<small class="pull-right text-muted">2020-08-02</small>
+										</div>
+										<p>???</p>
 									</div>
 								</div>
 							</div>
@@ -91,42 +107,26 @@
 									<img alt="Generic placeholder image" src="../images/pic.jpg">
 								</a>
 								<div class="media-body">
-									<h4 class="media-heading">최</h4>
-									내가 그린 기린그림은 목이 긴 기린그림인가 목이 안긴 기린그림인가?
-									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span id="more">더보기</span></a>
-								</div>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="media panel-body">
-									<a class="pull-left" href="#">
-										<img alt="Generic placeholder image" src="../images/pic.jpg">
-									</a>
-									<div class="media-body">
-										<h4 class="media-heading">정</h4>
-										네가 그린 기린그림은 못 그린 기린그림이고 내가 그린 기린그림은 잘 그린 기린그림이다.
+									<div class="media-heading">
+										<strong class="text-primary">김</strong>
+										<small class="pull-right text-muted">2020-08-02</small>
 									</div>
+									<p>간장 공장 공장장은 강 공장장이고 된장 공장 공장장은 장 공장장이다.</p>
+									<a href="#" class="reReply">답글 쓰기</a> |
+									<a data-toggle="collapse" href="#col2"><span class="more">더보기</span></a>
 								</div>
 							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading media">
-								<a class="pull-left" href="#"> 
-									<img alt="Generic placeholder image" src="../images/pic.jpg">
-								</a>
-								<div class="media-body">
-									<h4 class="media-heading">오</h4>
-									고려고교 교복은 고급교복이고 고려고교 교복은 고급원단을 사용했다.
-									<br><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> 더보기 </a>
-								</div>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse">
+							<div id="col2" class="panel-collapse collapse">
 								<div class="media panel-body">
 									<a class="pull-left" href="#">
 										<img alt="Generic placeholder image" src="../images/pic.jpg">
 									</a>
 									<div class="media-body">
-										<h4 class="media-heading">조</h4>
-										고려고교 
+										<div class="media-heading">
+											<strong class="text-primary">이</strong>
+											<small class="pull-right text-muted">2020-08-02</small>
+										</div>
+										<p>진간장</p>
 									</div>
 								</div>
 								<div class="media panel-body">
@@ -134,8 +134,11 @@
 										<img alt="Generic placeholder image" src="../images/pic.jpg">
 									</a>
 									<div class="media-body">
-										<h4 class="media-heading">송</h4>
-										ㄷㄷㄷ
+										<div class="media-heading">
+											<strong class="text-primary">박</strong>
+											<small class="pull-right text-muted">2020-08-02</small>
+										</div>
+										<p>아무댓글</p>
 									</div>
 								</div>
 							</div>
@@ -145,6 +148,38 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">답글 모달창</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="reReply">답글 내용</label> 
+						<input type="text" class="form-control" placeholder="답글 내용" name="reReply" id="reReply">
+					</div>
+					<div class="form-group">
+						<label for="reReplyer">답글 작성자</label> 
+						<input type="text" class="form-control" placeholder="답글 작성자" name="reReplyer" id="reReplyer">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info" id="btnModalModify">수정</button>
+					<button type="button" class="btn btn-danger" id="btnModalRemove">삭제</button>
+					<button type="button" class="btn btn-primary" id="btnModalRegister">등록</button>
+					<button type="button" class="btn btn-default" id="btnModalClose" data-dismiss="modal">닫기</button>
+				</div>
+			</div><!-- 모달 콘텐츠 -->
+		</div><!-- 모달 다이얼로그 -->
+	</div><!-- 모달 전체 윈도우 -->
+	
 	<footer>
 		<div class="row" align="center">
 			<ul class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
@@ -157,18 +192,119 @@
 	<script src="../js/jquery-3.5.1.js"></script>
 	<script src="../js/bootstrap.js"></script>
     <script type="text/javascript">
-    	$(function () { $('#collapseThree').collapse({ 
-    		toggle: false
-    	})});
-    	
-    	$('#more').click(function (event) {
-    		var more = $('#more').html();
+    	$('.more').click(function (event) {
+    		var more = $(this).html();
+    		console.log(more);
     		if ( more == "더보기" ) {
     			$(this).html('숨기기');
     		} else if ( more == "숨기기" ) {
     			$(this).html('더보기');
     		}
     	})
+    	
+    	function getToday(){
+		    var now = new Date();
+		    var year = now.getFullYear();
+		    var month = now.getMonth() + 1;
+		    var date = now.getDate();
+		
+		    if((month + "").length < 2){
+		        month = "0" + month;
+		    }
+		    if((date + "").length < 2){
+		    	date = "0" + date;
+		    }
+		    return today = year +'-'+ month +'-'+ date;
+		}
+    	
+    	var replyTotalcount = 6;
+    	$('#btnAddReply').on('click', function (event) {
+    		var str = '';
+			var replyer = $('.reply').find('input').val();
+			var reply = $('.reply').find('textarea').val();
+			
+			if ( !replyer ) {
+				alert('이름을 입력하세요');
+				return;
+			} else if ( !reply ) {
+				alert('내용을 입력하세요');
+				return;
+			}
+			
+			str += '<div class="panel panel-default">'
+    		str += '	<div class="panel panel-default">'
+    		str += '		<div class="panel-heading media">'
+    		str += '			<a class="pull-left" href="#"><img alt="Generic placeholder image" src="../images/pic.jpg"></a>'
+    		str += '			<div class="media-body">'
+       		str += '				<div class="media-heading">'
+       		str += '					<strong class="text-primary">' + replyer + '</strong>'
+       		str += '					<small class="pull-right text-muted">' + getToday() + '</small>'
+       		str += '				</div>'
+   			str += '				<p>' + reply + '</p>'
+   			str += '			</div>'
+   			str += '		</div>'
+			str += '	</div>'
+			str += '</div>'
+    		
+			$('#comment').prepend(str);
+			
+			$('.reply').find('input').val('');
+			$('.reply').find('textarea').val('');
+			replyTotalcount = replyTotalcount + 1;
+			$('.reply').find('.reply-totalcount').html(replyTotalcount);
+		});
+    	
+		// 모달창 화면요소를 미리 변수로 저장하기
+		var modal = $('.modal'); 
+		var modalTitle = $('#myModalLabel');
+		var modalInputReply = modal.find('input[name="reReply"]');
+		var modalInputReplyer = modal.find('input[name="reReplyer"]');
+		var btnModalRegister = $('#btnModalRegister');
+		var btnModalRemove = $('#btnModalRemove');
+		var btnModalModify = $('#btnModalModify');
+    	
+		// 답글 쓰기를 클릭했을때
+		$('.panel-group').on('click', '.reReply', function () {
+			modal.find('button[id != "btnModalClose"]').hide();
+			btnModalRegister.show();
+			
+			modal.modal('show');
+		});
+		
+		// 모달 창의 답글 등록 버튼을 클릭했을때
+		btnModalRegister.on('click', function () {
+			var str = '';
+			var reReplyer = $('.modal').find('input').val();
+			var reReply = $('.modal').find('input').val();
+			console.log(reReplyer, reReply);
+			if ( !reReplyer ) {
+				alert('이름을 입력하세요');
+				return;
+			} else if ( !reReply ) {
+				alert('내용을 입력하세요');
+				return;
+			}
+			
+			str += '<div class="media panel-body">'
+    		str += '	<a class="pull-left" href="#">'
+    		str += '		<img alt="Generic placeholder image" src="../images/pic.jpg">'
+    		str += '	</a>'
+   			str += '	<div class="media-body">'
+       		str += '		<div class="media-heading">'
+       		str += '			<strong class="text-primary">' + reReplyer + '</strong>'
+       		str += '			<small class="pull-right text-muted">' + getToday() + '</small>'
+       		str += '		</div>'
+   			str += '		<p>' + reReply + '</p>'
+   			str += '	</div>'
+   			str += '</div>'
+    		
+			$('#col2').prepend(str);
+			
+   			alert('댓글 작성 완료');
+   			modal.modal('hide');
+			$('.reReply').find('input').val('');
+			$('.reReply').find('input').val('');
+		});
     </script>
 </body>
 </html>
